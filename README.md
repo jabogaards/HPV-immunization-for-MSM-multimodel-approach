@@ -7,3 +7,4 @@ R code and data used to fit various models for penile-anal HPV16 transmission am
 The data from the HIV & HPV in MSM (H2M) study that was used for modeling is provided in .csv files within [H2M-data](H2M-data). In addition, [model-data](model-data) contains the output of HPV16 transmission models, written as external representations of R objects stored in .zip archives. Download the data and unzip the R objects into a directory, from where the code provided in [R-scripts](R-scripts) can be run.
 
 # Scripts
+The code provided can be used to reproduce the main figures of the corresponding publication. Whether reproductions have identical appearance as the published figures depends on the R version used and on the screen resolution. The published figures were created under R version 3.5.1 (2018-07-02) -- "Feather Spray" -- on a x86_64-w64-mingw32/x64 (64-bit) platform with 1680 x 1050 resolution.
