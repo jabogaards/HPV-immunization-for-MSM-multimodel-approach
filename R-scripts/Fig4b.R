@@ -16,6 +16,7 @@ setwd("msm.double")
 models <- c("SIS","SISPS","SISPminRS","SISPmaxRS","SIRS","SIS10RS","SIS33RS","SIRlocalS","SIS10RlocalS","SIS33RlocalS",
 		"SIRanalS","SIS10RanalS","SIS33RanalS","SIRpenileS","SIS10RpenileS","SIS33RpenileS","SIL","SIS10L","SIS33L","SIR33L")
 
+
 ### PENILE
 fill.y1_ <- function() {
   y.model <- array(NA,dim=c(360,length(time)))
