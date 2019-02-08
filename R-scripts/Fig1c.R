@@ -20,26 +20,10 @@ prev16_both_lcl <- binom.test(success, sum(select), conf.level=0.95)$conf.int[1]
 prev16_both_ucl <- binom.test(success, sum(select), conf.level=0.95)$conf.int[2]
 
 ##### MODELS
-load("base.SIS.RData")
-load("base.SISPS.RData")
-load("base.SISPminRS.RData")
-load("base.SISPmaxRS.RData")
-load("base.SIRS.RData")
-load("base.SIS10RS.RData")
-load("base.SIS33RS.RData")
-load("base.SIRlocalS.RData")
-load("base.SIS10RlocalS.RData")
-load("base.SIS33RlocalS.RData")
-load("base.SIRanalS.RData")
-load("base.SIS10RanalS.RData")
-load("base.SIS33RanalS.RData")
-load("base.SIRpenileS.RData")
-load("base.SIS10RpenileS.RData")
-load("base.SIS33RpenileS.RData")
-load("base.SIL.RData")
-load("base.SIS10L.RData")
-load("base.SIS33L.RData")
-load("base.SIR33L.RData")
+models <- c("SIS","SISPS","SISPminRS","SISPmaxRS","SIRS","SIS10RS","SIS33RS","SIRlocalS","SIS10RlocalS","SIS33RlocalS",
+		"SIRanalS","SIS10RanalS","SIS33RanalS","SIRpenileS","SIS10RpenileS","SIS33RpenileS","SIL","SIS10L","SIS33L","SIR33L")
+
+for(i in 1:length(models)) load(paste("base.",models[i],".RData",sep=""))
 
 load("delta.AIC.RData")
 aic.weights <- exp(-0.5*delta.aic)/sum(exp(-0.5*delta.aic))
