@@ -2,7 +2,7 @@ library("foreign")
 library(RColorBrewer)
 cols <- brewer.pal(11,"Spectral")
 
-##### DATA
+##### H2M DATA
 baseline <- read.csv("baseline.csv",header=T)
 select <- !is.na(baseline$hpv16_anal) &  !is.na(baseline$hpv16_penile)
 
@@ -49,13 +49,14 @@ for (j in 1:dim(Age_breaks)[2]) {
   }
 }
 
-##### MODELS
+##### MODEL-PREDICTIONS: : UNPACK base.models.zip
+
 minAge <- 9
 maxAge <- 80
 gridAge <- 1/4
 axisAge <- (minAge/gridAge):(maxAge/gridAge)*gridAge
 
-##### PENILE PREVALENCE
+### PENILE PREVALENCE
 x11()
 load("base.penile.RData")
 plot(penile.prev[1,] ~ axisAge, type="n", xlim=c(18,70), ylim=c(0,0.2),
@@ -79,7 +80,7 @@ for (j in 1:dim(Age_breaks)[2]) {
 box()
 title("Penile HPV16 prevalence")
 
-##### ANAL PREVALENCE
+### ANAL PREVALENCE
 x11()
 load("base.anal.RData")
 plot(anal.prev[1,] ~ axisAge, type="n", xlim=c(18,70), ylim=c(0,0.3),

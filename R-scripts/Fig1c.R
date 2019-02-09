@@ -1,6 +1,6 @@
 library("foreign")
 
-##### DATA
+##### H2M DATA
 baseline <- read.csv("baseline.csv",header=T)
 select <- !is.na(baseline$hpv16_anal) &  !is.na(baseline$hpv16_penile)
 
@@ -19,7 +19,8 @@ prev16_both <- success / sum(select)
 prev16_both_lcl <- binom.test(success, sum(select), conf.level=0.95)$conf.int[1]
 prev16_both_ucl <- binom.test(success, sum(select), conf.level=0.95)$conf.int[2]
 
-##### MODELS
+##### MODELS: UNPACK base.models.zip
+
 models <- c("SIS","SISPS","SISPminRS","SISPmaxRS","SIRS","SIS10RS","SIS33RS","SIRlocalS","SIS10RlocalS","SIS33RlocalS",
 		"SIRanalS","SIS10RanalS","SIS33RanalS","SIRpenileS","SIS10RpenileS","SIS33RpenileS","SIL","SIS10L","SIS33L","SIR33L")
 

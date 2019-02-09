@@ -1,7 +1,8 @@
 library(RColorBrewer)
 cols <- brewer.pal(11,"Spectral")
 
-##### IMPROVED UPTAKE
+##### IMPROVED UPTAKE: UNPACK uptake.zip
+
 timeOut <- 90
 endTime <- 180
 vac.start <- 100

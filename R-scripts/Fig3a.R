@@ -1,7 +1,8 @@
 library(RColorBrewer)
 cols <- brewer.pal(11,"Spectral")
 
-##### BASE-CASE UPTAKE
+##### BASE-CASE UPTAKE: UNPACK uptake.zip
+
 timeOut <- 90
 endTime <- 180
 vac.start <- 100

@@ -1,7 +1,7 @@
 library(RColorBrewer)
 cols <- brewer.pal(11,"Spectral")
 
-##### SITE-SPECIFIC TRANSMISSIBILITES: UNPACK beta.estimates
+##### SITE-SPECIFIC TRANSMISSIBILITES: UNPACK beta.estimates.zip
 
 load("beta1.matrix.RData")
 load("beta2.matrix.RData")
