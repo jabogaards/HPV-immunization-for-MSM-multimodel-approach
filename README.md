@@ -6,8 +6,8 @@ R code and data used to fit various models for penile-anal HPV16 transmission am
 # Data
 The data from the HIV & HPV in MSM (H2M) study that was used for modeling is provided in .csv files within [H2M-data](H2M-data). In addition, [model-data](model-data) contains the output of HPV16 transmission models, written as external representations of R objects stored in .zip archives. Download the data and unzip the R objects into a directory, from where the code provided in [R-scripts](R-scripts) can be run.
 
-# Scripts
-The code provided can be used to reproduce figures of the corresponding publication. Each script is named after a specific figure. Whether reproductions have identical appearance as the published figures may depend on the R version and on the screen resolution. The published figures were created under R version 3.4.1 (2017-06-30) -- "Single Candle" -- on a x86_64-w64-mingw32/x64 (64-bit) platform with 1680 x 1050 resolution.
-
 # Model
 R code with corresponding dll is given for the SISPRS model in [SISPRS-model](SISPRS-model). The code is given as an example to illustrate the structure of HPV16 transmission models and their output; source code is not provided. The model can be run from within the directory where the data are unzipped. The dll was compiled for R x64 3.4.1 (2017-06-30), performance under other versions is not guaranteed.
+
+# Scripts
+The code provided can be used to reproduce figures of the corresponding publication. Each script is named after a specific figure. Whether reproductions have identical appearance as the published figures may depend on the R version and on the screen resolution. The published figures were created under R version 3.4.1 (2017-06-30) -- "Single Candle" -- on a x86_64-w64-mingw32/x64 (64-bit) platform with 1680 x 1050 resolution.
